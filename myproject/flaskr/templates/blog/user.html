@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../static/style.css">
+    </head>
+<body id="index_user_page">
+    <nav>
+        <div class="wrap_nav">
+        <div class="e_nav n_a">
+        <a href="http://127.0.0.1:5000/">My Weight</a>
+            </div>
+        <div class="e_nav n_b">
+            <a href="http://127.0.0.1:5000/auth/register"></a>
+        </div>
+        <div class="e_nav n_c">
+            <a href="http://127.0.0.1:5000/auth/logout">Log out</a>
+        </div>
+        </div>
+    </nav>
+
+    <div class="wrap_dash">
+        <div class="e_dash d_s1">
+        </div>
+        <div class="e_dash d_a">
+            <div class="circle"></div>
+        </div>
+        <div class="e_dash d_b">
+            <div class="circle"></div>
+        </div>
+        <div class="e_dash d_c">
+            <div class="circle"></div>
+        </div>
+        <div class="e_dash d_s2">
+        </div>
+        <div class="e_dash_title d_d"> Current Weight
+            <!-- <div class="circle">A</div> -->
+        </div>
+        <div class="e_dash_title d_e">
+            <!-- <div class="circle">B</div> -->
+        </div>
+        <div class="e_dash_title d_f"> Goal Weight
+            <!-- <div class="circle">C</div> -->
+        </div>
+    </div>
+
+<div class="title_1">Your Posts</div>
+
+<!-- display posts -->
+<div class="post"></div>
+
+<div class="title_2">
+  <a href="{{ url_for('blog.create') }}">Add Weight</a>
+</div>
+
+<footer></footer>
+
+<script src="../../static/scripts.js"></script>
+</body>
+</html>

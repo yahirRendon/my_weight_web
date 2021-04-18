@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <div class="title_1">{% block title %}New Post{% endblock %}</dv>
+{% endblock %}
+
+{% block content %}
+  <div class="wrap_update">
+  <div class="u_a"></div>
+  <div class="u_b">
+    <form method="post">
+      <!-- <label for="title">Title</label>
+      <input name="title" id="title" value="{{ request.form['title'] }}" required> -->
+      <label for="weight">Weight</label>
+      <input name="weight" id="weight" value="{{ request.form['weight'] }}" required>
+      <label for="body">Message</label>
+      <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+      <input type="submit" value="Save">
+    </form>
+  </div>
+  <div class="u_c"></div>
+</div>
+{% endblock %}

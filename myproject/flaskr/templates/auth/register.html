@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <div class="title_1">{% block title %}Create Account{% endblock %}</div>
+{% endblock %}
+
+{% block content %}
+<div class="wrap_update">
+  <div class="u_a"></div>
+  <div class="u_b">
+  <form method="post">
+    <label for="firstname">First Name</label>
+    <input name="firstname" id="firstname" required>
+    <label for="username">Username</label>
+    <input name="username" id="username" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <label for="goalweight">Goal Weight</label>
+    <input name="goalweight" id="goalweight" required>
+    <input type="submit" value="Register">
+  </form>
+  </div>
+  <div class="u_c"></div>
+</div>
+{% endblock %}

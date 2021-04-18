@@ -1,0 +1,182 @@
+:root {
+    --light: #bed3c3;
+    --medium: #ebaca2;
+    --dark: #212e53;
+    --bright: #ce6a6b;
+    --third: #4a919e;
+}
+
+html { 
+    font-family: sans-serif; 
+    background: #eee; 
+    padding: 1rem; 
+}
+
+footer {
+    height: 100px;
+}
+
+/***** ******************* *****/
+/***** navigation bar area *****/
+/***** ******************* *****/
+.n_a {grid-area: n_a; font-size: xx-large;}
+.n_b {grid-area: n_b;}
+.n_c {grid-area: n_c;}
+
+.wrap_nav {
+    grid-area: wrap_nav;
+    display: grid;
+    grid-template-columns: auto 80px 80px;
+    grid-template-areas: "n_a n_b n_c";
+}
+
+.e_nav a {
+    text-decoration: none;
+    color: black;
+} 
+
+/***** ************** *****/
+/***** dashboard area *****/
+/***** ************** *****/
+.d_a {grid-area: d_a; }
+.d_b {grid-area: d_b;}
+.d_c {grid-area: d_c;}
+.d_d {grid-area: d_d; }
+.d_e {grid-area: d_e;}
+.d_f {grid-area: d_f;}
+.d_s1 {grid-area: d_s1;}
+.d_s2 {grid-area: d_s2;}
+
+.wrap_dash {
+    grid-area: dash_wrap;
+    display: grid;
+    grid-template-columns: 20% auto auto auto 20%;
+    grid-template-areas: "d_s1 d_a d_b d_c d_s2"
+                         "d_s1 d_d d_e d_f d_s2";
+    text-align: center; 
+}
+
+.e_dash {
+    display: flex;
+    justify-content: center;
+}
+
+.e_dash_title {
+    font-size: small;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+.circle{
+    width:4em;
+    height:4em;
+    border-radius:2em;
+    font-size:x-large;
+    line-height:4em;
+    text-align:center;
+    border: 2px solid var(--third);
+}
+
+/***** ****************** *****/
+/***** *** posts area *** *****/
+/***** ****************** *****/
+.p_a {grid-area: p_a;font-size: large; text-align: right; color: var(--bright);}
+.p_b {grid-area: p_b;font-size: large; text-align: left; color: var(--medium);}
+.p_c {grid-area: p_c;font-size: small; color: var(--dark)}
+.p_d {grid-area: p_d;text-align: left; font-size: small; color: var(--third)}
+.p_e {grid-area: p_e;text-align: right; font-size: small;}
+
+
+.p_a, .p_b, .p_c,
+.p_d, .p_e {
+    padding: .5em;
+}
+
+.wrap_post {
+    grid-area: w_p;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-areas: "p_a p_a p_b p_b"
+                         "p_c p_c p_c p_c"
+                         "p_d p_d p_d p_e" ;
+
+    text-align: center;
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    background-color: #fff ;
+}
+
+.wrap_post a {
+    text-decoration: none;
+    color: gray;
+}
+
+.wrap_post a:hover {
+    text-decoration: none;
+    color: var(--bright);
+}
+
+.wrap_post_out {
+    grid-area: wpo;
+    display: grid;
+    grid-template-columns: auto minmax(auto, 350px) auto;
+    grid-template-areas: ". w_p .";
+    margin-bottom: 25px;
+}
+
+
+/***** ********************* *****/
+/***** titles headers & text *****/
+/***** ********************* *****/
+.title_1 {
+    margin: 1em;
+    text-align: center;
+    font-size: x-large;
+}
+
+.title_2{
+    margin: 1.5em;
+    text-align: center;
+    font-size: large;
+}
+
+.title_2 a {
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    left: 50%;
+    bottom: 1em;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding:1em;
+    background-color: var(--dark);
+}
+
+.title_2 a:hover {
+    background-color: var(--bright);
+}
+
+/***** ******************** *****/
+/***** * update post area * *****/
+/***** ******************** *****/
+input, label {
+    display: block;
+}
+
+hr {
+    width: 250px;
+}
+
+.u_a {grid-area: u_a;}
+.u_b {grid-area: u_b;}
+.u_c {grid-area: u_c;}
+
+.wrap_update {
+    grid-area: w_u;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "u_a u_b u_c";
+}
+
+
+
